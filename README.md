@@ -71,15 +71,15 @@ cd ../client
 npm install
 ```
 
-4. **Configure Environment (Optional)**
+4. **Configure Environment Variables**
 
-Create `server/.env`:
-```env
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
-```
+See [ENV_SETUP.md](ENV_SETUP.md) for detailed instructions on setting up environment variables.
 
-> **Note**: If you don't provide MongoDB URI, the app will use in-memory storage.
+Quick setup:
+- Create `server/.env` with your MongoDB credentials
+- Create `client/.env` with backend URL
+
+> **Note**: Never commit `.env` files. They contain sensitive credentials.
 
 5. **Run Backend**
 ```bash
@@ -169,17 +169,11 @@ ipchats/
 
 ### Environment Variables
 
-**Backend (`server/.env`)**
-```env
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/dbname
-PORT=5000
-NODE_ENV=production
-```
+For detailed environment setup instructions, see [ENV_SETUP.md](ENV_SETUP.md).
 
-**Frontend (`client/.env`)**
-```env
-VITE_SOCKET_URL=http://localhost:5000
-```
+**Quick Reference:**
+- Backend: `server/.env` (MongoDB URI, PORT)
+- Frontend: `client/.env` (VITE_SOCKET_URL)
 
 ## 🤝 Contributing
 
