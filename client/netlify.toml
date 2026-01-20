@@ -1,0 +1,5 @@
+/* eslint-disable no-undef */
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
